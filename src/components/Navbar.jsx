@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { items } from './Data'
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { items } from "./Data";
 
-import { BsFillCartCheckFill } from 'react-icons/bs';
+import { BsFillCartCheckFill } from "react-icons/bs";
 
 const Navbar = ({ setData, cart }) => {
   const location = useLocation();
@@ -29,7 +29,9 @@ const Navbar = ({ setData, cart }) => {
     <>
       <header className="sticky-top">
         <div className="nav-bar">
-          <Link to={'/'} className="brand">E-Cart</Link>
+          <Link to={"/"} className="brand">
+            Pratik Ahire
+          </Link>
 
           <form onSubmit={handleSubmit} className="search-bar">
             <input
@@ -40,9 +42,9 @@ const Navbar = ({ setData, cart }) => {
             />
           </form>
 
-          <Link to={'/cart'} className="cart">
+          <Link to={"/cart"} className="cart">
             <button type="button" className="btn btn-primary position-relative">
-              <BsFillCartCheckFill style={{ fontSize: '1.5rem' }} />
+              <BsFillCartCheckFill style={{ fontSize: "1.5rem" }} />
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {cart.length}
                 <span className="visually-hidden">unread messages</span>
@@ -51,62 +53,62 @@ const Navbar = ({ setData, cart }) => {
           </Link>
         </div>
 
-        {location.pathname === '/' && (
+        {location.pathname === "/" && (
           <div className="nav-bar-wrapper">
             <div className="items">Filter by {"->"}</div>
             <div
               onClick={() => setData(items)}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               No Filter
             </div>
             <div
-              onClick={() => filterByCategory('mobiles')}
+              onClick={() => filterByCategory("mobiles")}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               Mobiles
             </div>
             <div
-              onClick={() => filterByCategory('laptops')}
+              onClick={() => filterByCategory("laptops")}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               Laptops
             </div>
             <div
-              onClick={() => filterByCategory('tablets')}
+              onClick={() => filterByCategory("tablets")}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               Tablets
             </div>
             <div
               onClick={() => filterByPrice(29999)}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               {">="}29999
             </div>
             <div
               onClick={() => filterByPrice(49999)}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               {">="}49999
             </div>
             <div
               onClick={() => filterByPrice(69999)}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               {">="}69999
             </div>
             <div
               onClick={() => filterByPrice(89999)}
               className="items"
-              style={{ cursor: 'pointer' }} // Add this line
+              style={{ cursor: "pointer" }} // Add this line
             >
               {">="}89999
             </div>

@@ -1,7 +1,7 @@
 .nav-bar{
     display: flex;
     justify-content: space-between;
-    background-color: #270858;
+    background-color: #3d95f3;
     padding: 10px;
     color: white;
 }
@@ -40,7 +40,7 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background-color: #4b1b78;
+    background-color: #5fb7cf;
     color: white;
     font-weight: bold;
 }
